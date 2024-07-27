@@ -1,0 +1,367 @@
+@font-face {
+  font-family: ferda;
+  src: url(./assets/font/Fedra\ Arabic\ Display\ AR\ LT\ Black.ttf) format('truetype');
+}
+.header-body{
+  text-align: center;
+}
+.header{
+  background: -webkit-linear-gradient(left,rgb(30, 102, 236),rgb(228, 218, 218));
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+.header::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 50%;
+  background: -webkit-linear-gradient(left,rgba(219, 57, 219, 0.24),rgba(128, 0, 128, 0.247));
+  box-shadow: 20px 8px 60px rgb(255, 6, 255);
+  z-index: -2;
+  animation: header 4s linear infinite alternate;
+}
+@keyframes header{
+  100%{
+    left: 70%;
+  }
+}
+.section-search{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.input-search{
+  width: 310px;
+  height: 50px;
+  font-size: medium;
+  border-radius: 15px;
+  border: 3px solid rgb(24, 245, 227);
+  outline: none;
+  transition: all 0.5s linear;
+}
+.input-search:focus{
+  width: 380px;
+}
+.card-save{
+  width: auto;
+  height: 60px;
+  padding: 8px 8px;
+  background: -webkit-linear-gradient(left,rgb(49, 49, 46),rgb(88, 81, 81));
+  top: 3;
+  left: 0;
+  margin: 10px;
+  position: fixed;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 32px;
+  cursor: pointer;
+  box-shadow: 0 10px 45px 20px rgb(0, 255, 255);
+  font-family: ferda;
+}
+.card-save::after{
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: rgb(30, 255, 0);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: -5px;
+}
+.card-save-link{
+  color: rgb(252, 215, 5) !important;
+  text-decoration: none !important;
+}
+@media screen and (max-width: 500px){
+  .card-save{
+    width: 30px;
+    height: 50px;
+  }
+  .input-search:hover{
+    width: 310px;
+  }
+}
+.title-header{
+  font-size: 65px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 0 10px 20px;
+  text-decoration: underline;
+  text-decoration-color: chartreuse;
+  text-decoration-style: wavy;
+}
+.pageCards{
+  width: 100%;
+  /* background: -webkit-linear-gradient(left,rgb(44, 253, 114),rgb(217, 255, 0)); */
+  background: url('./assets/bg-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.card-btn{
+  width: 120px;
+  height: 45px;
+  background: rgb(113, 228, 180) !important;
+  border-radius: 19px !important;
+  font-family: sans-serif;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+.card-btn::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 19px;
+  height: 100%;
+  background: rgb(243, 239, 243);
+  opacity: 0.5;
+  transition: 1s !important;
+  width: 50%;
+  display: none;
+}
+.card-btn:hover{
+  box-shadow: 0 0 15px rgb(68, 200, 252);
+}
+.card-btn:hover::after{
+  display: inline-block;
+  left: 27%;
+}
+.card-page-title{
+  text-shadow: 0 0 20px rgb(238, 225, 38);
+  color: rgb(24, 17, 17);
+  font-family: ferda;
+}
+.card-page{
+  transition: all 0.5s linear;
+  background: -webkit-linear-gradient(left,rgb(9, 10, 68),rgb(20, 194, 58)) !important;
+  border-radius: 20px !important;
+  border: none !important;
+}
+.card-page-img{
+  width: 80% !important;
+  border-radius: 30px !important;
+  margin-top: 8px;
+}
+.img-header{
+  position: absolute;
+  margin-left: -10rem;
+  margin-top: 2.9rem;
+}
+.input-search{
+  position: relative;
+}
+.btn-formSearch{
+  width: 95px;
+  height: 100%;
+  background: rgb(124, 240, 153) !important;
+  border-radius: 15px !important;
+  margin-left: -20px;
+  margin-top: -5px;
+  transition: all 0.2s ease-in-out !important;
+}
+.btn-formSearch:hover{
+  background: rgb(40, 219, 243) !important;
+}
+@media screen and (max-width: 414px){
+  .btn-formSearch{
+    height: 55%;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 762px){
+  .img-header{
+    display: none;
+  }
+}
+@media screen and (min-width: 1380px){
+  .img-header{
+    margin-left: auto;
+  }
+}
+.img-img-header{
+  box-shadow: 0 4px 2px -2px gray;
+}
+.loading{
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100dvh;
+  background: rgb(83, 78, 78);
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(left,rgb(12, 184, 241),rgb(255, 0, 242));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animeLoad 2s linear infinite;
+}
+.load::after{
+  content: '';
+  width: 170px;
+  height: 170px;
+  background: rgb(7, 255, 160);
+  border-radius: 50%;
+}
+@keyframes animeLoad{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.text-error-cards{
+  color: red;
+  font-size: 25px;
+  text-shadow: 0 19px 17px white;
+}
+.bg-saveCardPage{
+  background: rgb(250, 207, 16);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.bg-saveCardPage::after{
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-6deg);
+  background: rgb(14, 223, 14);
+  z-index: -2;
+  position: absolute;
+  border-radius: 7px;
+  /* margin-top: -180px; */
+  overflow: hidden;
+}
+.cardsave{
+  border-radius: 20px;
+  background: rgb(240, 227, 227);
+}
+.img-cardsave{
+  width: 180px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.btn-cardsave{
+  height: 80px !important;
+  width: 90px;
+  background: -webkit-linear-gradient(top,rgb(0, 247, 255),rgb(52, 181, 185),rgb(0, 255, 179)) !important;
+  color: white !important;
+  font-size: 19px !important; 
+  font-weight: bold;
+  text-shadow: 0 0 20px black;
+  transition: 2s !important;
+}
+.btn-cardsave:hover{
+  background: -webkit-linear-gradient(top,rgb(0, 255, 179),rgb(52, 181, 185),rgb(0, 247, 255)) !important;
+}
+.btns-cardsave{
+  display: flex !important;
+  justify-content: end !important;
+}
+/* @media screen and (max-width: 768px){
+  .btn-cardsave{
+    border: none !important;
+    width: 80px;
+    height: 80px;
+    margin: 0 !important;
+  }
+  .btns-cardsave{
+    display: flex;
+    flex-direction: column;
+  }
+  .title-cardsave{
+    font-size: 2.1rem !important;
+  }
+} */
+@media screen and (max-width: 768px){
+  /* .btn-cardsave{
+    border: none !important;
+    width: 80px;
+    height: 80px;
+    margin: 0 !important;
+  }
+  .btns-cardsave{
+    display: flex;
+    flex-direction: column;
+  }
+  .title-cardsave{
+    font-size: 2.1rem !important;
+  } */
+  .container-cardsave{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .img-cardsave{
+    width: 80%;
+  }
+  .title-cardsave{
+    margin: 0 !important;
+  }
+  .btns-cardsave{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* .rgbHeader{
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  background: -webkit-linear-gradient(left,rgb(27, 26, 43),rgb(58, 52, 54));
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  display: none;
+  flex-wrap: wrap;
+  flex-grow: grow;
+}
+.rgbHeader span{
+  width: 100px;
+  height: 100px;
+  background: rgb(0, 255, 179);
+  margin-left: 7px;
+  margin-top: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.rgbHeader span:hover{
+  background: rgb(241, 234, 234);
+}
+@media screen and (min-width: 852px){
+  .rgbHeader{
+    display: flex;
+  }
+}
+@media screen and (min-width: 1325px){
+  .rgbHeader{
+    width: 400px;
+    height: 400px;
+    top: 30px;
+  }
+  .rgbHeader span{
+    width: 180px;
+    height: 180px;
+    margin-left: 14px;
+    margin-top: 8px;
+  }
+} */
